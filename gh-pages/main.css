@@ -49,11 +49,12 @@ textarea {
   background-color: #000;
   float: left;
   width: 62%;
+  padding-top: 30px;
 }
 
 #navigation {
   max-width:1600px;
-  padding: 15px 20px 20px;
+  padding: 15px 20px 0;
   background-color: rgba(255,255,255,.8);
   float: left;
   width: 38%;
@@ -73,12 +74,12 @@ textarea {
 }
 
 #actions,#tabs,.icon {
-  float:left;
+  float: left;
 }
 
 @media (min-width:800px){
   #navigation: {
-    padding:10px 80px 20px;
+    padding: 15px 0 0 5.5%;
   }
 }
 
@@ -88,6 +89,7 @@ textarea {
   -moz-user-select:none;
   -khtml-user-select:none;
   -ms-user-select:none;
+  padding-right: 55px;
 }
 
 .tab {
@@ -127,21 +129,24 @@ textarea {
 #actions {
   width:15%;
   text-align:right;
+  margin-top: -10px;
 }
 
 #actions > * {
   height:30px;
   width:30px;
+  display: block;
+  float: right;
 }
 
 #actions svg {
   fill: #355;
+  position: absolute;
+  right: 17px;
 }
 
-.icon {
-  font-size:12px;
-  width:20px;
-  display:inline-block;
+#download svg {
+  right: 17px;
 }
 
 #add {
@@ -176,6 +181,12 @@ textarea {
   width:29px;
 }
 
+.icon {
+  font-size:12px;
+  width:20px;
+  display:inline-block;
+}
+
 #text,#wrapper,body,html {
   height:100%;
 }
@@ -201,7 +212,7 @@ textarea {
 
 @media (min-width:800px){
   #text{
-    padding:0 80px 50px;
+    padding: 0 0 0 5.5%;
   }
 }
 
