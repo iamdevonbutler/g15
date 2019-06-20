@@ -1,3 +1,4 @@
+/*************** reset *******************/
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,
 canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,
 fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,
@@ -27,7 +28,8 @@ blockquote,q {
 }
 
 blockquote:after,blockquote:before,q:after,q:before {
-  content:'';content:none;
+  content:'';
+  content:none;
 }
 
 table {
@@ -42,11 +44,24 @@ html {
   -webkit-box-sizing:inherit;box-sizing:inherit;
 }
 
+/*************** styles *******************/
 textarea {
   background-color: #000;
+  float: left;
+  width: 62%;
 }
 
-#navigation, #wrapper{
+#navigation {
+  max-width:1600px;
+  padding: 15px 20px 20px;
+  background-color: rgba(255,255,255,.8);
+  float: left;
+  width: 38%;
+  height: 100vh;
+  overflow: auto;
+}
+
+#navigation, #wrapper {
   margin:0 auto;
   background-color: #000;
 }
@@ -61,12 +76,6 @@ textarea {
   float:left;
 }
 
-#navigation{
-  max-width:1600px;
-  padding: 15px 20px 20px;
-  background-color:rgba(255,255,255,.8);
-}
-
 @media (min-width:800px){
   #navigation: {
     padding:10px 80px 20px;
@@ -74,7 +83,11 @@ textarea {
 }
 
 #tabs{
-  width:85%;-webkit-user-select:none;-moz-user-select:none;-khtml-user-select:none;-ms-user-select:none
+  width:85%;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -khtml-user-select:none;
+  -ms-user-select:none;
 }
 
 .tab {
