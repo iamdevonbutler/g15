@@ -1,0 +1,163 @@
+@import "reset";
+@import "bourbon";
+
+//
+// Mixins.
+//
+@mixin userselect($value) {
+  -webkit-user-select: $value;
+  -moz-user-select: $value;
+  -khtml-user-select: $value;
+  -ms-user-select: $value;
+}
+
+//
+// OOCSS.
+//
+.clearfix {
+  @include clearfix();
+}
+
+//
+// Variables.
+//
+$transitiontime: .3s;
+
+//
+// Styling.
+//
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#wrapper {
+  margin: 0 auto;
+}
+
+#navigation {
+  @include clearfix;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 10px 20px 20px 20px;
+  background-color: rgba(255,255,255,.80);
+  @media (min-width: 800px) {
+    padding: 10px 80px 20px 80px;
+  }
+}
+
+#tabs {
+  float: left;
+  width: 85%;
+  @include userselect(none);
+  @include clearfix();
+}
+
+.tab {
+  display: inline-block;
+  padding: 8px 14px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background: rgba(0,0,0,.03);
+  color: rgba(0,0,0,.30);
+  transition: all $transitiontime;
+  &:hover {
+    color: rgba(0,0,0,.7);
+    transition: all $transitiontime;
+  }
+}
+
+.tab.active {
+  color: rgba(0,0,0,.85);
+}
+
+#actions {
+  float: left;
+  width: 15%;
+  text-align: right;
+  > * {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.icon {
+  font-size: 12px;
+  width: 20px;
+  display: inline-block;
+  float: left;
+}
+
+#add {
+  display: inline-block;
+  fill: rgba(0,0,0,.25);
+  padding-top: 9px;
+  @include userselect(none);
+  transition: fill $transitiontime;
+  &:hover {
+    fill: rgba(0,0,0,.65);
+    transition: fill $transitiontime;
+  }
+}
+
+#remove {
+  display: inline-block;
+  fill: rgba(0,0,0,.25);
+  padding-top: 9px;
+  margin-left: -2px;
+  @include userselect(none);
+  transition: fill $transitiontime;
+  &:hover {
+    fill: rgba(0,0,0,.65);
+    transition: fill $transitiontime;
+  }
+}
+
+#download {
+  display: inline-block;
+  fill: rgba(0,0,0,.25);
+  @include userselect(none);
+  margin-left: -5px;
+  transition: fill $transitiontime;
+  &:hover {
+    fill: rgba(0,0,0,.65);
+    transition: fill $transitiontime;
+  }
+  svg {
+    padding-top: 5px;
+    width: 29px;
+  }
+}
+
+html, body, #wrapper, #text {
+  height: 100%;
+}
+
+#text {
+  font-size: 1em;
+  font-family: georgia, serif;
+  color: rgba(0,0,0,0.6);
+  width: 100%;
+  padding: 0 20px 50px 20px;
+  min-height: 100%;
+  margin: 0 auto;
+  max-width: 1600px;
+  display: block;
+  border: none;
+  box-shadow: none;
+  focus-outline: none;
+  focus-box-shadow: none;
+  outline: none;
+  @media (min-width: 800px) {
+    padding: 0 80px 50px 80px;
+  }
+}
+
+#text::-webkit-scrollbar {
+  width: 0 !important
+}
+#text {
+  overflow: -moz-scrollbars-none;
+}

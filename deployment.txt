@@ -1,0 +1,8 @@
+Just a reminder (to deploy):
+
+git subtree push --prefix gh-pages origin gh-pages
+
+---
+
+for custom domain
+make sure we uncomment out the 'assets' gulp task to move CNAME into dist
