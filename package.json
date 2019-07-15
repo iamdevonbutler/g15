@@ -1,7 +1,7 @@
 {
   "name": "g15",
   "version": "0.1.0",
-  "description": "Better browser notes",
+  "description": "G14 dark",
   "main": "gh-pages/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -32,7 +32,7 @@ function download(filename, text) {
     bindEvents() {
       // Download localStorage.
       this.$download.on('click', () => {
-        download('g14.backup.txt', localStorage.content);
+        download('g15.backup.txt', localStorage.content);
       });
 
       // Track and save content.
