@@ -46,9 +46,11 @@ textarea {
   padding-top: 2.128623625vw;
   padding-right: 5.572809vw;
   background-color: #000;
+  // font-weight: 600;
   float: left;
   font-size: 1.2360679775vw; // .61803398875 * .38196601125)
   font-family: 'courier new', serif;
+  // color: rgba(187, 187, 187, .82);
   color: #bbb;
   margin: 0 auto;
   display: block;
@@ -70,12 +72,13 @@ textarea {
   padding-left: 2.128623625vw;
   padding-right: 2.128623625vw;
   padding-top: 1.315561749vw;
+  font-weight: 600;
   font-family: 'courier new', serif;
   background-color: #000;
   min-height: 100%;
   width: calc(100% - 61.803398875%);
   float: left;
-  color: #355;
+  color: rgba(51, 85, 85, .82);
   font-size: 17px;
 }
 
@@ -90,7 +93,7 @@ textarea {
 .tab {
   cursor: pointer;
   display: inline-block;
-  padding: 8px 14px;
+  padding: 7px 11px;
   margin-bottom: 10px;
   margin-right: 10px;
   background: rgba(0,0,0,.03);
@@ -100,7 +103,7 @@ textarea {
     left: -10px;
   }
   &:hover {
-    color: rgba(0,0,0,.7);
+    color: rgba(51, 85, 85, 1);
     transition: all $transitiontime;
   }
 }
@@ -118,7 +121,7 @@ textarea {
 }
 
 #add {
-  fill: #355;
+  fill: rgba(51, 85, 85, .82);
   @include userselect(none);
   height: 20px;
   width: 20px;
@@ -128,21 +131,21 @@ textarea {
 }
 
 #remove {
-  fill: #355;
+  fill: rgba(51, 85, 85, .82);
   @include userselect(none);
   height: 16px;
   width: 16px;
   position: absolute;
   right: 7px;
-  top: 29px;
+  top: 30px;
 }
 
 #download {
-  fill: #355;
+  fill: rgba(51, 85, 85, .82);
   @include userselect(none);
   height: 19px;
   width: 19px;
   position: absolute;
   right: 5px;
-  top: 50px;
+  top: 54px;
 }
