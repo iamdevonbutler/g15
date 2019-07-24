@@ -21,7 +21,7 @@
 //
 // Variables.
 //
-$transitiontime: .3s;
+$transitiontime: .17s;
 
 //
 // Styling.
@@ -42,7 +42,7 @@ html {
 textarea {
   min-height: 100%;
   width: 61.803398875%;
-  padding-left: 2.128623625vw;
+  padding-left: 5.572809vw;
   padding-top: 2.128623625vw;
   padding-right: 5.572809vw;
   background-color: #000;
@@ -69,6 +69,7 @@ textarea {
   @include clearfix;
   padding-left: 2.128623625vw;
   padding-right: 2.128623625vw;
+  padding-top: 1.315561749vw;
   font-family: 'courier new', serif;
   background-color: #000;
   min-height: 100%;
@@ -80,13 +81,14 @@ textarea {
 
 /** Tabs **/
 #tabs {
-  float: left;
-  width: 85%;
   @include userselect(none);
   @include clearfix();
+  position: relative;
+  top: -7px; // offset for browser padding top.
 }
 
 .tab {
+  cursor: pointer;
   display: inline-block;
   padding: 8px 14px;
   margin-bottom: 10px;
@@ -108,59 +110,39 @@ textarea {
 }
 
 #actions {
-  float: left;
-  width: 15%;
-  text-align: right;
-  > * {
-    height: 30px;
-    width: 30px;
-  }
+  cursor: pointer;
+
 }
 
 .icon {
-  font-size: 12px;
-  width: 20px;
-  display: inline-block;
-  float: left;
 }
 
 #add {
-  display: inline-block;
-  fill: red;
-  padding-top: 9px;
+  fill: #355;
   @include userselect(none);
-  transition: fill $transitiontime;
-  &:hover {
-    fill: rgba(0,0,0,.65);
-    transition: fill $transitiontime;
-  }
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
 
 #remove {
-  display: inline-block;
-  fill: red;
-  padding-top: 9px;
-  margin-left: -2px;
+  fill: #355;
   @include userselect(none);
-  transition: fill $transitiontime;
-  &:hover {
-    fill: rgba(0,0,0,.65);
-    transition: fill $transitiontime;
-  }
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  right: 7px;
+  top: 29px;
 }
 
 #download {
-  display: inline-block;
-  fill: red;
+  fill: #355;
   @include userselect(none);
-  margin-left: -5px;
-  transition: fill $transitiontime;
-  &:hover {
-    fill: rgba(0,0,0,.65);
-    transition: fill $transitiontime;
-  }
-  svg {
-    padding-top: 5px;
-    width: 29px;
-  }
+  height: 19px;
+  width: 19px;
+  position: absolute;
+  right: 5px;
+  top: 50px;
 }
