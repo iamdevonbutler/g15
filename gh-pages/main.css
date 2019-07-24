@@ -58,9 +58,6 @@ html {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
-body {
-  background-color: #000; }
-
 #wrapper {
   margin: 0 auto;
   height: 100vh; }
@@ -69,10 +66,14 @@ body {
 textarea {
   min-height: 100%;
   width: 61.803398875%;
+  padding-left: 2.128623625vw;
+  padding-top: 2.128623625vw;
+  padding-right: 5.572809vw;
+  background-color: #000;
   float: left;
-  font-size: 17px;
+  font-size: 1.2360679775vw;
   font-family: 'courier new', serif;
-  color: #1b1bb1;
+  color: #bbb;
   margin: 0 auto;
   display: block;
   border: none;
@@ -87,9 +88,15 @@ textarea {
 
 /** Nav **/
 #navigation {
+  padding-left: 2.128623625vw;
+  padding-right: 2.128623625vw;
+  font-family: 'courier new', serif;
+  background-color: #000;
   min-height: 100%;
   width: calc(100% - 61.803398875%);
-  float: left; }
+  float: left;
+  color: #355;
+  font-size: 17px; }
   #navigation::after {
     clear: both;
     content: "";
@@ -114,16 +121,18 @@ textarea {
   margin-bottom: 10px;
   margin-right: 10px;
   background: rgba(0, 0, 0, 0.03);
-  color: rgba(0, 0, 0, 0.3);
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
+  .tab:before {
+    content: '/';
+    left: -10px; }
   .tab:hover {
     color: rgba(0, 0, 0, 0.7);
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
 
 .tab.active {
-  color: rgba(0, 0, 0, 0.85); }
+  color: red; }
 
 #actions {
   float: left;
@@ -141,7 +150,7 @@ textarea {
 
 #add {
   display: inline-block;
-  fill: rgba(0, 0, 0, 0.25);
+  fill: red;
   padding-top: 9px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -156,7 +165,7 @@ textarea {
 
 #remove {
   display: inline-block;
-  fill: rgba(0, 0, 0, 0.25);
+  fill: red;
   padding-top: 9px;
   margin-left: -2px;
   -webkit-user-select: none;
@@ -172,7 +181,7 @@ textarea {
 
 #download {
   display: inline-block;
-  fill: rgba(0, 0, 0, 0.25);
+  fill: red;
   -webkit-user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;

@@ -33,10 +33,6 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  background-color: #000;
-}
-
 #wrapper {
   margin: 0 auto;
   height: 100vh;
@@ -46,10 +42,14 @@ body {
 textarea {
   min-height: 100%;
   width: 61.803398875%;
+  padding-left: 2.128623625vw;
+  padding-top: 2.128623625vw;
+  padding-right: 5.572809vw;
+  background-color: #000;
   float: left;
-  font-size: 17px;
+  font-size: 1.2360679775vw; // .61803398875 * .38196601125)
   font-family: 'courier new', serif;
-  color: #1b1bb1;
+  color: #bbb;
   margin: 0 auto;
   display: block;
   border: none;
@@ -67,9 +67,15 @@ textarea {
 /** Nav **/;
 #navigation {
   @include clearfix;
+  padding-left: 2.128623625vw;
+  padding-right: 2.128623625vw;
+  font-family: 'courier new', serif;
+  background-color: #000;
   min-height: 100%;
   width: calc(100% - 61.803398875%);
   float: left;
+  color: #355;
+  font-size: 17px;
 }
 
 /** Tabs **/
@@ -86,8 +92,11 @@ textarea {
   margin-bottom: 10px;
   margin-right: 10px;
   background: rgba(0,0,0,.03);
-  color: rgba(0,0,0,.30);
   transition: all $transitiontime;
+  &:before {
+    content: '/';
+    left: -10px;
+  }
   &:hover {
     color: rgba(0,0,0,.7);
     transition: all $transitiontime;
@@ -95,7 +104,7 @@ textarea {
 }
 
 .tab.active {
-  color: rgba(0,0,0,.85);
+  color: red;
 }
 
 #actions {
@@ -117,7 +126,7 @@ textarea {
 
 #add {
   display: inline-block;
-  fill: rgba(0,0,0,.25);
+  fill: red;
   padding-top: 9px;
   @include userselect(none);
   transition: fill $transitiontime;
@@ -129,7 +138,7 @@ textarea {
 
 #remove {
   display: inline-block;
-  fill: rgba(0,0,0,.25);
+  fill: red;
   padding-top: 9px;
   margin-left: -2px;
   @include userselect(none);
@@ -142,7 +151,7 @@ textarea {
 
 #download {
   display: inline-block;
-  fill: rgba(0,0,0,.25);
+  fill: red;
   @include userselect(none);
   margin-left: -5px;
   transition: fill $transitiontime;
