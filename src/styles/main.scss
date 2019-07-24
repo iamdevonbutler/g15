@@ -33,21 +33,46 @@ html {
   box-sizing: inherit;
 }
 
-#wrapper {
-  margin: 0 auto;
+body {
+  background-color: #000;
 }
 
-#navigation {
-  @include clearfix;
-  max-width: 1600px;
+#wrapper {
   margin: 0 auto;
-  padding: 10px 20px 20px 20px;
-  background-color: rgba(255,255,255,.80);
-  @media (min-width: 800px) {
-    padding: 10px 80px 20px 80px;
+  height: 100vh;
+}
+
+/** Textarea **/;
+textarea {
+  min-height: 100%;
+  width: 61.803398875%;
+  float: left;
+  font-size: 17px;
+  font-family: 'courier new', serif;
+  color: #1b1bb1;
+  margin: 0 auto;
+  display: block;
+  border: none;
+  box-shadow: none;
+  focus-outline: none;
+  focus-box-shadow: none;
+  outline: none;
+  overflow: -moz-scrollbars-none;
+  &::-webkit-scrollbar {
+    width: 0 !important
   }
 }
 
+
+/** Nav **/;
+#navigation {
+  @include clearfix;
+  min-height: 100%;
+  width: calc(100% - 61.803398875%);
+  float: left;
+}
+
+/** Tabs **/
 #tabs {
   float: left;
   width: 85%;
@@ -129,35 +154,4 @@ html {
     padding-top: 5px;
     width: 29px;
   }
-}
-
-html, body, #wrapper, #text {
-  height: 100%;
-}
-
-#text {
-  font-size: 1em;
-  font-family: georgia, serif;
-  color: rgba(0,0,0,0.6);
-  width: 100%;
-  padding: 0 20px 50px 20px;
-  min-height: 100%;
-  margin: 0 auto;
-  max-width: 1600px;
-  display: block;
-  border: none;
-  box-shadow: none;
-  focus-outline: none;
-  focus-box-shadow: none;
-  outline: none;
-  @media (min-width: 800px) {
-    padding: 0 80px 50px 80px;
-  }
-}
-
-#text::-webkit-scrollbar {
-  width: 0 !important
-}
-#text {
-  overflow: -moz-scrollbars-none;
 }

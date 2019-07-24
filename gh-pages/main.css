@@ -1,231 +1,189 @@
-/*************** reset *******************/
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,
-canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,
-fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,
-i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,
-s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
-  margin:0;
-  padding:0;
-  border:0;
-  font:inherit;
-  vertical-align:baseline;
-}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
-  display:block;
-}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
 
 body {
-  line-height:1;
-}
+  line-height: 1; }
 
-ol,ul {
-  list-style:none;
-}
+ol, ul {
+  list-style: none; }
 
-blockquote,q {
-  quotes:none;
-}
+blockquote, q {
+  quotes: none; }
 
-blockquote:after,blockquote:before,q:after,q:before {
-  content:'';
-  content:none;
-}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
 
 table {
-  border-collapse:collapse;border-spacing:0;
-}
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table; }
 
 html {
-  -webkit-box-sizing:border-box;box-sizing:border-box;
-}
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
-*,:after,:before {
-  -webkit-box-sizing:inherit;box-sizing:inherit;
-}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
 
-/*************** styles *******************/
-// 42
-// 26
-// 16
+body {
+  background-color: #000; }
+
+#wrapper {
+  margin: 0 auto;
+  height: 100vh; }
+
+/** Textarea **/
 textarea {
-  background-color: #000;
+  min-height: 100%;
+  width: 61.803398875%;
   float: left;
-  width: 62%;
-  padding-top: 42px;
-}
+  font-size: 17px;
+  font-family: 'courier new', serif;
+  color: #1b1bb1;
+  margin: 0 auto;
+  display: block;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  focus-outline: none;
+  focus-box-shadow: none;
+  outline: none;
+  overflow: -moz-scrollbars-none; }
+  textarea::-webkit-scrollbar {
+    width: 0 !important; }
 
-@media (min-width:800px){
-  textarea {
-    padding-top: 26px;
-  }
-}
-
+/** Nav **/
 #navigation {
-  max-width:1600px;
-  padding: 26px 20px 0;
-  background-color: rgba(255,255,255,.8);
+  min-height: 100%;
+  width: calc(100% - 61.803398875%);
+  float: left; }
+  #navigation::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+/** Tabs **/
+#tabs {
   float: left;
-  width: 38%;
-  height: 100vh;
-  overflow: auto;
-}
-
-#navigation, #wrapper {
-  margin:0 auto;
-  background-color: #000;
-}
-
-#navigation::after,#tabs::after,.clearfix::after {
-  clear:both;
-  content:"";
-  display:table;
-}
-
-#actions,#tabs,.icon {
-  float: left;
-}
-
-@media (min-width:800px){
-  #navigation: {
-    padding: 26px 0 0 5.5%;
-  }
-}
-
-#tabs{
-  width:85%;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -khtml-user-select:none;
-  -ms-user-select:none;
-  padding-right: 55px;
-}
+  width: 85%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none; }
+  #tabs::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 .tab {
-  color: #355;
-  display:inline-block;
-  padding: 6px 11px;
-  margin-bottom:10px;
-  margin-right:10px;
-  /* background: #111; */
-  color:rgba(0,0,0,.3);
-  -webkit-transition:all .3s;
-  transition:all .3s;
-  font-size: 15px;
-  font-family: courier new;
-  border: 1px solid #111;
-}
-
-#add, #remove {
-  padding-top:9px;
-  display:inline-block;
-  fill:rgba(0,0,0,.25);
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -khtml-user-select:none;
-  -ms-user-select:none
-}
-
-.tab:hover {
-  color:rgba(0,0,0,.7);
-  -webkit-transition:all .3s;
-  transition:all .3s;
-}
+  display: inline-block;
+  padding: 8px 14px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background: rgba(0, 0, 0, 0.03);
+  color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+  .tab:hover {
+    color: rgba(0, 0, 0, 0.7);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
 
 .tab.active {
-  color:rgba(0,0,0,.85);
-}
+  color: rgba(0, 0, 0, 0.85); }
 
 #actions {
-  width:15%;
-  text-align:right;
-  margin-top: -10px;
-}
-
-#actions > * {
-  height:30px;
-  width:30px;
-  display: block;
-  float: right;
-}
-
-#actions svg {
-  fill: #355;
-  position: absolute;
-  right: 17px;
-}
-
-#download svg {
-  right: 17px;
-}
-
-#add {
-  -webkit-transition:fill .3s;
-  transition:fill .3s;
-}
-
-#add:hover,#download:hover,#remove:hover {
-  fill:rgba(0,0,0,.65);
-  -webkit-transition:fill .3s;
-  transition:fill .3s;
-}
-
-#remove {
-  margin-left:-2px;
-  -webkit-transition:fill .3s;
-  transition:fill .3s;
-}
-
-#download {
-  display:inline-block;
-  fill:rgba(0,0,0,.25);
-  -webkit-user-select:none;
-  -moz-user-select:none;-khtml-user-select:none;-ms-user-select:none;
-  margin-left:-5px;
-  -webkit-transition:fill .3s;
-  transition:fill .3s;
-}
-
-#download svg{
-  padding-top:5px;
-  width:29px;
-}
+  float: left;
+  width: 15%;
+  text-align: right; }
+  #actions > * {
+    height: 30px;
+    width: 30px; }
 
 .icon {
-  font-size:12px;
-  width:20px;
-  display:inline-block;
-}
+  font-size: 12px;
+  width: 20px;
+  display: inline-block;
+  float: left; }
 
-#text,#wrapper,body,html {
-  height:100%;
-}
+#add {
+  display: inline-block;
+  fill: rgba(0, 0, 0, 0.25);
+  padding-top: 9px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s; }
+  #add:hover {
+    fill: rgba(0, 0, 0, 0.65);
+    -webkit-transition: fill 0.3s;
+    transition: fill 0.3s; }
 
-#text {
-  font-size:18px;
-  font-family:"courier new";
-  color: #a5a5a5;
-  width:100%;
-  padding:0 20px 50px;
-  min-height:100%;
-  margin:0 auto;
-  max-width:1600px;
-  display:block;
-  border:none;
-  -webkit-box-shadow:none;
-  box-shadow:none;
-  focus-outline:none;
-  focus-box-shadow:none;
-  outline:0;
-  overflow:-moz-scrollbars-none;
-}
+#remove {
+  display: inline-block;
+  fill: rgba(0, 0, 0, 0.25);
+  padding-top: 9px;
+  margin-left: -2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s; }
+  #remove:hover {
+    fill: rgba(0, 0, 0, 0.65);
+    -webkit-transition: fill 0.3s;
+    transition: fill 0.3s; }
 
-@media (min-width:800px){
-  #text{
-    padding: 0 0 0 5.5%;
-  }
-}
-
-#text::-webkit-scrollbar{
-  width:0!important;
-}
+#download {
+  display: inline-block;
+  fill: rgba(0, 0, 0, 0.25);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  margin-left: -5px;
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s; }
+  #download:hover {
+    fill: rgba(0, 0, 0, 0.65);
+    -webkit-transition: fill 0.3s;
+    transition: fill 0.3s; }
+  #download svg {
+    padding-top: 5px;
+    width: 29px; }
