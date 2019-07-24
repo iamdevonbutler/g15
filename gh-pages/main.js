@@ -807,6 +807,21 @@ function download(filename, text) {
   }
 }
 
+function wheel(obj) {
+  var i = -1, len = obj.length - 1;
+  return function() {
+    if (i === len) i = -1;
+    return obj[i+=1];
+  };
+};
+
+var types = [
+  'menlo',
+  'cousine',
+  'robo',
+  'monospace',
+];
+
 ;(function($, window, document, localstorage, Modernizr, Sortable, keyboardjs, undefined) {
 
   var obj = {
@@ -814,14 +829,26 @@ function download(filename, text) {
     cache() {
       this.$window = $(window);
       this.$document = $(document);
+      this.$body = $('body');
       this.$text = $('#text');
       this.$tabs = $('#tabs');
       this.$add = $('#add');
       this.$remove = $('#remove');
       this.$download = $('#download');
+      this.$type = $('#type');
+      this.typeWheel = wheel(types);
+      this.activeType = 'monospace';
     },
 
     bindEvents() {
+      this.$type.on('click', () => {
+        var type = this.typeWheel();
+        console.log(type);
+        this.$body.removeClass(this.activeType);
+        this.$body.addClass(type);
+        this.activeType = type;
+      });
+
       // Download localStorage.
       this.$download.on('click', () => {
         download('g15.backup.txt', localStorage.content);

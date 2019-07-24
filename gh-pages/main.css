@@ -58,21 +58,24 @@ html {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
+body {
+  background-color: #000; }
+
 #wrapper {
   margin: 0 auto;
   height: 100vh; }
 
 /** Textarea **/
 textarea {
-  min-height: 100%;
+  height: 100vh;
   width: 61.803398875%;
   padding-left: 5.572809vw;
   padding-top: 2.128623625vw;
   padding-right: 5.572809vw;
   background-color: #000;
   float: left;
+  line-height: 1.38196601125;
   font-size: 1.2360679775vw;
-  font-family: 'courier new', serif;
   color: #bbb;
   margin: 0 auto;
   display: block;
@@ -88,17 +91,18 @@ textarea {
 
 /** Nav **/
 #navigation {
+  height: 100vh;
   padding-left: 2.128623625vw;
   padding-right: 2.128623625vw;
   padding-top: 1.315561749vw;
-  font-weight: 600;
-  font-family: 'courier new', serif;
   background-color: #000;
   min-height: 100%;
   width: calc(100% - 61.803398875%);
   float: left;
   color: rgba(51, 85, 85, 0.82);
-  font-size: 17px; }
+  font-size: 17px;
+  overflow: scroll;
+  text-align: right; }
   #navigation::after {
     clear: both;
     content: "";
@@ -120,7 +124,7 @@ textarea {
 .tab {
   cursor: pointer;
   display: inline-block;
-  padding: 7px 11px;
+  padding: 7px 4px;
   margin-bottom: 10px;
   margin-right: 10px;
   background: rgba(0, 0, 0, 0.03);
@@ -146,10 +150,10 @@ textarea {
   -moz-user-select: none;
   -khtml-user-select: none;
   -ms-user-select: none;
-  height: 20px;
-  width: 20px;
+  height: 24px;
+  width: 24px;
   position: absolute;
-  right: 5px;
+  right: 3px;
   top: 5px; }
 
 #remove {
@@ -158,10 +162,10 @@ textarea {
   -moz-user-select: none;
   -khtml-user-select: none;
   -ms-user-select: none;
-  height: 16px;
-  width: 16px;
+  height: 18px;
+  width: 18px;
   position: absolute;
-  right: 7px;
+  right: 6px;
   top: 30px; }
 
 #download {
@@ -175,3 +179,40 @@ textarea {
   position: absolute;
   right: 5px;
   top: 54px; }
+
+#type {
+  fill: rgba(51, 85, 85, 0.82);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  height: 19px;
+  width: 19px;
+  position: absolute;
+  right: 5px;
+  top: 86px; }
+
+/** Font changer **/
+.menlo textarea {
+  font-family: 'menlo', monospace; }
+
+.menlo #navigation {
+  font-family: 'menlo', monospace; }
+
+.monospace textarea {
+  font-family: monospace; }
+
+.monospace #navigation {
+  font-family: monospace; }
+
+.cousine textarea {
+  font-family: 'Cousine', monospace; }
+
+.cousine #navigation {
+  font-family: 'Cousine', monospace; }
+
+.robo textarea {
+  font-family: 'Roboto Mono', monospace; }
+
+.robo #navigation {
+  font-family: 'Roboto Mono', monospace; }
