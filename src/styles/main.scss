@@ -53,6 +53,9 @@ textarea {
   float: left;
   line-height: 1.38196601125;
   font-size: 1.2360679775vw; // .61803398875 * .38196601125)
+  @media (min-width: 800px) {
+    // font-size: 16px;
+  }
   color: #bbb;
   margin: 0 auto;
   display: block;
@@ -66,7 +69,6 @@ textarea {
     width: 0 !important
   }
 }
-
 
 /** Nav **/;
 #navigation {
@@ -136,11 +138,11 @@ textarea {
 #remove {
   fill: rgba(51, 85, 85, .82);
   @include userselect(none);
-  height: 18px;
-  width: 18px;
+  height: 20px;
+  width: 20px;
   position: absolute;
-  right: 6px;
-  top: 30px;
+  right: 5px;
+  top: 32px;
 }
 
 #download {
@@ -150,7 +152,7 @@ textarea {
   width: 19px;
   position: absolute;
   right: 5px;
-  top: 54px;
+  top: 70px;
 }
 
 #type {
@@ -160,7 +162,7 @@ textarea {
   width: 19px;
   position: absolute;
   right: 5px;
-  top: 86px;
+  top: 100px;
 }
 
 
