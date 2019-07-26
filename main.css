@@ -162,11 +162,11 @@ textarea {
   -moz-user-select: none;
   -khtml-user-select: none;
   -ms-user-select: none;
-  height: 18px;
-  width: 18px;
+  height: 20px;
+  width: 20px;
   position: absolute;
-  right: 6px;
-  top: 30px; }
+  right: 5px;
+  top: 32px; }
 
 #download {
   fill: rgba(51, 85, 85, 0.82);
@@ -178,7 +178,7 @@ textarea {
   width: 19px;
   position: absolute;
   right: 5px;
-  top: 54px; }
+  top: 70px; }
 
 #type {
   fill: rgba(51, 85, 85, 0.82);
@@ -190,7 +190,7 @@ textarea {
   width: 19px;
   position: absolute;
   right: 5px;
-  top: 86px; }
+  top: 100px; }
 
 /** Font changer **/
 .menlo textarea {
