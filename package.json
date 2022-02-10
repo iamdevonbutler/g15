@@ -23,7 +23,7 @@
     "gulp-watch": "4.3.4",
     "keyboardjs": "2.1.1",
     "node-bourbon": "4.2.3",
-    "node-sass": "4.12.0",
+    "node-sass": "7.0.0",
     "yargs": "3.18.0"
   }
 }
